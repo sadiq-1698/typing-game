@@ -1,0 +1,40 @@
+@media screen and (min-width : 320px){
+
+    .input-field{
+        width : 90%;
+        height: 50px;
+        border : 3px solid lightskyblue;
+        border-radius: 5px;
+        font-size : 30px;
+        outline: none;
+        padding-left : 1rem;
+        font-family: var(--font-family);
+    }
+
+    .fill-bar{
+        margin-top: 2rem;
+        width : 90%;
+        height: 40px;
+        border : 3px solid black;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+
+    .fill-bar .filler{
+        transition: 0.3s all ease-in;
+        height: 100%;
+        max-width: 100%;
+        background-color: limegreen;
+    }
+
+    .the-word{
+        margin-bottom : 2rem;
+    }
+
+    .game-header h1{
+        font-size: 60px;
+        color: brown;
+    }
+
+}
