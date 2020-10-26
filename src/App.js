@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import IntroScreen from './components/IntroPage/IntroScreen';
 import GameScreen from './components/GamePage/GameScreen';
+import ShowGame from './contexts/ShowGame';
 import './App.css';
 
 const words = [
@@ -10,119 +11,27 @@ const words = [
 
 function App() {
 
-  // const HARD = 1;
-  // const MEDIUM = 2;
-  // const EASY = 3;
+  const[enableStartButton, setEnableStartButton] = useState(false);
+  const[showGame, setShowGame] = useState(false);
+  const[currentWord, setCurrentWord] = useState("");
+  const[difficulty, setDifficulty] = useState(null);
+  const[timer, setTimer] = useState(-40);
 
-  // const[word, setWord] = useState("");
-  // const[score, setScore] = useState(0);
-  // const[difficulty, setDifficulty] = useState(EASY);
-  // const[timer, setTimer] = useState(0);
-
-  // useEffect(() => {
-  //   const counter = setTimeout(() => setTimer((prev) => prev - 1), 1000);
-  //   return () => clearTimeout(counter);
-  // }, [timer]);
+  const providerValues = {
+    setShowGame, enableStartButton, setEnableStartButton, words, currentWord, setCurrentWord, timer, setTimer,
+    difficulty, setDifficulty
+  }
 
   return (
     <div className="main-container">
-        <IntroScreen />
-        {/* <GameScreen /> */}
+      <ShowGame.Provider value = {providerValues} >
+        {
+          showGame ? <GameScreen /> :<IntroScreen />
+        }
+      </ShowGame.Provider>
     </div>
   );
-
   
-  
-  
-  
-  
-  
-  
-  // {
-    /* <h1>{word}</h1>
-        <div className="outer-box">
-          <div className="fill-color" style={{
-            width: `${((50 + timer) / 50 * 100)}%`
-          }}>
-          </div>
-        </div>
-        <h1 style={{color:"red"}}>
-          {
-            timer <= 0 ? 'You lost' : ""
-          }
-        </h1>
-        <input 
-          type="text"
-          placeholder="type here"
-          onChange={(e) => {
-            onWordMatch(e);
-          }}
-        />
-        <button onClick={chooseRandomWord}>Generate random word</button>
-        <h1>Score: { score }</h1>
-        <h1>Time left : {timer}{
-        } seconds</h1> */
-      // }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  // function chooseRandomWord(){
-  //   let randomWord = words[Math.floor(Math.random() * words.length)];
-  //   setWord(randomWord);
-  //   return randomWord;
-  // }
-
-  // function updateScore(){
-  //   setScore((prevScore) => prevScore + 1);
-  // }
-
-  // function onWordMatch(e){
-  //   if(e.target.value.toLowerCase() === word){
-  //     e.target.value="";
-  //     updateScore();
-  //     updateTimer();
-  //     chooseRandomWord();
-  //   }
-  // }
-
-  // function chooseDifficulty(e){
-  //   if(e.target.value === 'easy'){
-  //     setDifficulty(EASY);
-  //   }else if(e.target.value === 'medium'){
-  //     setDifficulty(MEDIUM);
-  //   }else{
-  //     setDifficulty(HARD);
-  //   }
-  // }
-
-  // function updateTimer(){
-  //   if(difficulty === EASY){
-  //     setTimer((prevTime) => prevTime + EASY);
-  //   }else if(difficulty === MEDIUM){
-  //     setTimer((prevTime) => prevTime + MEDIUM);
-  //   }else{
-  //     setTimer((prevTime) => prevTime + HARD);
-  //   }
-  // }
-
 }
-
 
 export default App;

@@ -85,6 +85,10 @@
       margin-bottom : 1rem;
       background-color: lightseagreen;
     }
+
+    .start-game-button button.btn.active{
+      cursor: pointer;
+    }
   
   
   }
