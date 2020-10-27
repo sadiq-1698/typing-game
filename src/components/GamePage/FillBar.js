@@ -6,6 +6,8 @@ const FillBar = () => {
     const { timer, setTimer } = useContext(ShowGame);
 
     useEffect(() => {
+        if(timer >= 0)
+            return;
         const counter = setTimeout(() => setTimer((prev) => prev - 1), 1000);
         return () => clearTimeout(counter);
       }, [timer, setTimer]);

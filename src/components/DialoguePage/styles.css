@@ -1,3 +1,28 @@
 @media screen and (min-width : 320px){
-    
+    .dialog-page{
+        height: 100vh;
+        width: 100vh;
+        position: fixed;
+        width : 100%;
+        height: 100%;
+        left : 0;
+        background-color: rgba(0,0,0,0.6);
+        display: none;
+    }
+
+    .dialog-page.display{
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dialog-page .dialog-box{
+        width: 250px;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

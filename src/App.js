@@ -26,7 +26,8 @@ function App() {
     <div className="main-container">
       <ShowGame.Provider value = {providerValues} >
         {
-          showGame ? <GameScreen /> :<IntroScreen />
+
+          showGame ? <GameScreen /> : <IntroScreen />
         }
       </ShowGame.Provider>
     </div>
