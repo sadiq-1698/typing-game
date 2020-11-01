@@ -3,12 +3,14 @@ import ShowGame from '../../contexts/ShowGame';
 
 const StartGame = () => {
 
-  const { setShowGame, enableStartButton, setCurrentWord, words }  = useContext(ShowGame);
+  const { setShowGame, enableStartButton, setCurrentWord, words, showGame, currentWord }  = useContext(ShowGame);
 
   function setUpGame(){
     let randomWord = words[Math.floor(Math.random() * words.length)];
     setCurrentWord(randomWord);
-    setShowGame((prev) => !prev);
+    setShowGame(true);
+    console.log(showGame);
+    console.log(currentWord);
   }
 
     return (
