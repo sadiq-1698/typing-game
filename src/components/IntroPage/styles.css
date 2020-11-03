@@ -1,94 +1,112 @@
 @media screen and (min-width: 320px) {
-    .main-container {
-      min-height: 100vh;
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .main-container .avatar-container {
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .main-container .avatar-container h1{
-      font-size : 100px;
-      height: 100px;
-      line-height: 100px;
-      color : brown;
-    }
-    .main-container .difficulty {
-      margin-top : 3rem;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    #difficulty label {
-      cursor: pointer;
-      float: left;
-      width: 170px;
-      margin: 4px;
-      background-color: #EFEFEF;
-      border-radius: 20px;
-      border: 1px solid #D0D0D0;
-      overflow: auto;
-    }
-    #difficulty label span {
-      text-align: center;
-      font-size: 32px;
-      padding: 13px 0px;
-      display: block;
-    }
-    #difficulty label input {
-      position: absolute;
-      top: -20px;
-    }
-    #difficulty input:checked+span {
-      background-color: #404040;
-      color: #F7F7F7;
-    }
-  
-    #difficulty .easy {
-      background-color: limegreen;
-      color: #333;
-    }
-    #difficulty .medium {
-      background-color: rgb(37, 189, 216);
-      color: #333;
-    }
-    #difficulty .hard {
-      background-color: rgb(216, 37, 61);
-      color: #333;
-    }
-  
-    .start-game-button{
-      margin-top : 2rem;
-      display: flex;
-      justify-content: center;
-      width : 100%;
-    }
-  
-    .start-game-button button{
-      width : 60%;
-      border-radius: 20px;
-      outline : none;
-      border: none;
-      padding : 0.8rem 0;
-      font-family: var(--font-family);
-      font-size: 20px;
-      cursor: not-allowed;
-      margin-bottom : 1rem;
-      background-color: lightseagreen;
-    }
-
-    .start-game-button button.btn.active{
-      cursor: pointer;
-    }
-  
-  
+  .main-container {
+    max-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
   }
+
+  .main-container .app-header {
+    height: 12vh;
+    background-color: #5950C2;
+    color: var(--white);
+    font-family: var(--font-family-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .main-container .app-header h1 {
+    font-size: 200%;
+  }
+
+  .main-container .difficulty {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .difficulty label {
+    cursor: pointer;
+    float: left;
+    width: 170px;
+    border-radius: 5px;
+    overflow: auto;
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .difficulty label span {
+    text-align: center;
+    font-size: 100%;
+    font-family: var(--font-family-1);
+    font-weight: bold;
+    display: block;
+  }
+
+  .difficulty label input {
+    position: absolute;
+    top: -20px;
+  }
+
+  .difficulty input:checked+span {
+    color: #F7F7F7;
+  }
+
+  .difficulty .easy {
+    background-color: #27AE60;
+    color: #333;
+  }
+
+  .difficulty .medium {
+    background-color: #F2994A;
+    color: #333;
+  }
+
+  .difficulty .hard {
+    background-color: #EB5757;
+    color: #333;
+  }
+
+  .main-container .start-game-button {
+    height: calc(100vh - 82vh);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .start-game-button button {
+    width: 85%;
+    height: 10vh;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: not-allowed;
+    color: #D9C4C4;
+    box-shadow: var(--box-shadow);
+    background-color: #40729F;
+    font-weight: bold;
+    font-size: 25px;
+    transition: all 0.3s ease-out;
+  }
+
+  .start-game-button button:hover {
+    box-shadow: none;
+  }
+
+  .start-game-button button.btn.active {
+    cursor: pointer;
+    color: var(--white);
+  }
+
+
+}

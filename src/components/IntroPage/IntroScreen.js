@@ -1,5 +1,5 @@
 import React from 'react';
-import GameAvatar from './GameAvatar';
+import AppHeader from './AppHeader';
 import Difficulty from './Difficulty';
 import StartGame from './StartGame';
 import './styles.css';
@@ -7,7 +7,7 @@ import './styles.css';
 const IntroScreen = () => {
     return (
       <> 
-        <GameAvatar />
+        <AppHeader />
         <Difficulty />
         <StartGame />
       </>
