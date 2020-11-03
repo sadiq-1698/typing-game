@@ -15,8 +15,8 @@ const DialogBox = (props) => {
         "Daaamn, that's impressive!",
         "You should totally do data entry!",
         "Legend!",
-        "Bhayangara",
-        "Majjayini"
+        "Bravo!",
+        "Your finger's got muscles!"
     ];
 
     function chooseRandomMessage(array){
