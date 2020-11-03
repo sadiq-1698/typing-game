@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import InputField from './InputField';
 import Word from './Word';
 import FillBar from './FillBar';
-import Header from './Header';
 import './styles.css';
 import DialogBox from '../DialoguePage/DialogBox';
 import ShowGame from '../../contexts/ShowGame';
+import AppHeader from '../IntroPage/AppHeader';
 
 const GameScreen = () => {
 
@@ -13,7 +13,7 @@ const GameScreen = () => {
 
     return (
       <>
-        <Header />
+        <AppHeader />
         <FillBar />
         <Word />
         <InputField />

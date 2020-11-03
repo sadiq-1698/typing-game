@@ -13,13 +13,15 @@ const FillBar = () => {
       }, [timer, setTimer]);
 
     return (
-        <div className="fill-bar">
-            <div 
-                className="filler"
-                style={{
-                    width : `${((50 + timer) / 50 * 100)}%`
-                }}
-            ></div>
+        <div className="fill-bar-container">
+            <div className="fill-bar">
+                <div 
+                    className="filler"
+                    style={{
+                        width : `${((50 + timer) / 50 * 100)}%`
+                    }}
+                ></div>
+            </div>
         </div>
     );
 }

@@ -20,13 +20,15 @@ const InputField = () => {
   }
 
     return (
-      <input 
-        className="input-field"
-        type="text"
-        placeholder="type here"
-        autoFocus={true}
-        onChange={(e)=> onWordMatch(e)}
-      />
+      <div className="input-container">
+        <input 
+          className="input-field"
+          type="text"
+          placeholder="Type here. . ."
+          autoFocus={true}
+          onChange={(e)=> onWordMatch(e)}
+        />
+      </div>
     );
   }
 

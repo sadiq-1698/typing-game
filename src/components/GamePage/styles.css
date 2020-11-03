@@ -1,39 +1,52 @@
-@media screen and (min-width : 320px){
+@media screen and (min-width : 320px) {
 
-    .input-field{
-        width : 90%;
-        height: 50px;
-        border : 3px solid lightskyblue;
-        border-radius: 5px;
-        font-size : 30px;
-        outline: none;
-        padding-left : 1rem;
+    .fill-bar-container {
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .fill-bar{
-        margin-top: 2rem;
-        width : 90%;
+    .fill-bar {
+        width: 90%;
         height: 40px;
-        border : 3px solid black;
-        border-radius: 15px;
-        margin-bottom: 2rem;
+        border-radius: 5px;
         overflow: hidden;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.8);
     }
 
-    .fill-bar .filler{
+    .fill-bar .filler {
         transition: 0.3s all ease-in;
         height: 100%;
         max-width: 100%;
         background-color: limegreen;
     }
 
-    .the-word{
-        margin-bottom : 2rem;
+    .the-word {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-family: var(--font-family-1);
     }
 
-    .game-header h1{
-        font-size: 60px;
-        color: brown;
+    .input-container{
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .input-container .input-field {
+        width: 85%;
+        height: 46px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border : none;
+        outline: none;
+        padding-left: 1rem;
+        font-size: 100%;
+        font-family: var(--font-family-1);
     }
 
 }
