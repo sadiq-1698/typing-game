@@ -3,7 +3,7 @@ import ShowGame from '../../contexts/ShowGame';
 
 const InputField = () => {
 
-  const { currentWord, setCurrentWord, words, setTimer, difficulty } = useContext(ShowGame);
+  const { currentWord, setCurrentWord, words, setTimer, timer, difficulty } = useContext(ShowGame);
 
   function chooseRandomWord(){
     let randomWord = words[Math.floor(Math.random() * words.length)];
