@@ -13,21 +13,6 @@
 
 body {
   margin: 0 auto;
-  background-color: #fbfbfb;
+  background-color: #F9E2E9;
 }
 
-.outer-box {
-  width: 200px;
-  height: 20px;
-  border: 2px solid black;
-  overflow: hidden;
-  border-radius: 50px;
-}
-
-.outer-box .fill-color {
-  background-color: limegreen;
-  height: 100%;
-  overflow: hidden;
-  max-width: 100%;
-  transition: 0.5s all ease-in;
-}
