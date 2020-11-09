@@ -12,11 +12,11 @@ const DialogBox = (props) => {
     ];
 
     const winMessage = [
-        "Daaamn, that's impressive!",
-        "You should totally do data entry!",
-        "Legend!",
-        "Bravo!",
-        "Your finger's got muscles!"
+        "Daaamn, that's impressive! 😮",
+        "You should totally do data entry! 😅",
+        "Legend! 😎",
+        "Bravo! 👏",
+        "Your finger's got muscles! 💪"
     ];
 
     function chooseRandomMessage(array){
