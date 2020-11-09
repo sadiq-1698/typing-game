@@ -4,11 +4,11 @@ import './styles.css';
 const DialogBox = (props) => {
 
     const loseMessage = [
-        "You are a total noob",
-        "Facepalm",
-        "Shame!",
-        "Just stop it!",
-        "What a clown!"
+        "You are a total noob 🤣",
+        "Facepalm 🤦",
+        "Shame! 🤭",
+        "Just stop it! 😑",
+        "What a clown! 🤡"
     ];
 
     const winMessage = [
