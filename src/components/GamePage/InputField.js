@@ -12,7 +12,7 @@ const InputField = () => {
   }
 
   const onWordMatch = (e) => {
-    if(e.target.value.toLowerCase() === currentWord){
+    if(e.target.value.toLowerCase().trim() === currentWord){
       e.target.value="";
       chooseRandomWord();
       setTimer((prev) => prev + difficulty);
